@@ -412,7 +412,7 @@ end
 
 M.files = function(opts)
     opts = opts or {}
-    local show_untracked = utils.get_default(opts.show_untracked, true)
+    local show_untracked = true
 
     local results = utils.get_os_command_output({'hg', 'files'}, opts.cwd)
     if show_untracked then
